@@ -43,21 +43,21 @@ const (
 	Reversed   = "\033[7m"
 )
 
-func clearTerminal() {
+func ClearTerminal() {
 	fmt.Print("\033[2J")
 }
-func setCursor(x int, y int) {
+func SetCursor(x int, y int) {
 	fmt.Printf("\033[%d;%dH", x, y)
 }
-func setColor(c Color) {
+func SetColor(c Color) {
 	fmt.Print(c)
 }
-func setBGColor(c BGColor) {
+func SetBGColor(c BGColor) {
 	fmt.Print(c)
 }
-func setDecoration(d Decoration) {
+func SetDecoration(d Decoration) {
 	fmt.Print(d)
 }
-func resetTerminal() {
+func ResetTerminal() {
 	fmt.Print("\033[0m")
 }
